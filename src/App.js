@@ -1,25 +1,35 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { FaSpotify, FaSoundcloud, FaInstagram, FaYoutube, FaMusic } from 'react-icons/fa';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import '@fontsource/eb-garamond';
 
 const AppContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: #1a1a1a;
   background-image: url('/assets/images/sky-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -130,84 +140,9 @@ const IconLink = styled.a`
   }
 `;
 
-const BackgroundOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
-  pointer-events: none;
-  z-index: 1;
-`;
-
 function App() {
-  const particlesInit = useCallback(async engine => {
-    await loadFull(engine);
-  }, []);
-
   return (
     <AppContainer>
-      <BackgroundOverlay />
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={{
-          background: {
-            opacity: 0
-          },
-          fpsLimit: 120,
-          particles: {
-            color: {
-              value: "#ffffff"
-            },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.15,
-              width: 1
-            },
-            collisions: {
-              enable: false
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outMode: "bounce",
-              random: false,
-              speed: 0.8,
-              straight: false
-            },
-            number: {
-              density: {
-                enable: true,
-                area: 800
-              },
-              value: 60
-            },
-            opacity: {
-              value: 0.2
-            },
-            shape: {
-              type: "circle"
-            },
-            size: {
-              value: { min: 1, max: 2 }
-            }
-          },
-          detectRetina: true
-        }}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 1,
-          pointerEvents: 'none'
-        }}
-      />
       <ContentContainer>
         <div style={{ flex: 1 }} />
         <Title>
@@ -224,17 +159,17 @@ function App() {
           <IconLink href="https://open.spotify.com/artist/PIANIKA" target="_blank" rel="noopener noreferrer">
             <FaSpotify />
           </IconLink>
-          <IconLink href="https://soundcloud.com/PIANIKA" target="_blank" rel="noopener noreferrer">
+          <IconLink href="https://music.apple.com/us/artist/pianika/1619462850" target="_blank" rel="noopener noreferrer">
+            <FaMusic />
+          </IconLink>
+          <IconLink href="https://soundcloud.com/pianika" target="_blank" rel="noopener noreferrer">
             <FaSoundcloud />
           </IconLink>
-          <IconLink href="https://instagram.com/PIANIKA" target="_blank" rel="noopener noreferrer">
+          <IconLink href="https://instagram.com/pianikamusic" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </IconLink>
-          <IconLink href="https://www.youtube.com/@pianikamusic" target="_blank" rel="noopener noreferrer">
+          <IconLink href="https://youtube.com/@pianika" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
-          </IconLink>
-          <IconLink href="#" target="_blank" rel="noopener noreferrer">
-            <FaMusic />
           </IconLink>
         </SocialLinks>
       </ContentContainer>
