@@ -54,12 +54,12 @@ const Title = styled.h1`
   animation: ${float} 8s ease-in-out infinite;
   
   @media (max-width: 768px) {
-    font-size: 11vw;
+    font-size: 6rem;
     letter-spacing: 0.3rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 10vw;
+    font-size: 5rem;
     letter-spacing: 0.2rem;
   }
 
