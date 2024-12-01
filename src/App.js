@@ -1,7 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { FaSpotify, FaSoundcloud, FaInstagram, FaYoutube, FaMusic } from 'react-icons/fa';
 import '@fontsource/eb-garamond';
+
+const float = keyframes`
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+`;
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -32,28 +43,15 @@ const AppContainer = styled.div`
   }
 `;
 
-const ContentContainer = styled.div`
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  padding: 20vh 0;
-`;
-
 const Title = styled.h1`
   font-family: 'EB Garamond', serif;
-  font-size: min(12vw, 7.5rem);
+  font-size: 7.5rem;
   letter-spacing: 0.5rem;
   margin: 0;
   padding: 0;
   text-align: center;
   white-space: nowrap;
-  animation: float 8s ease-in-out infinite;
-  width: 100%;
+  animation: ${float} 8s ease-in-out infinite;
   
   @media (max-width: 768px) {
     font-size: 11vw;
@@ -66,8 +64,9 @@ const Title = styled.h1`
   }
 
   span {
+    display: inline-block;
     opacity: 0;
-    animation: fadeIn 0.15s ease-in-out forwards;
+    animation: ${fadeIn} 0.15s ease-in-out forwards;
   }
 
   ${Array.from({ length: 7 }).map((_, i) => `
@@ -75,6 +74,18 @@ const Title = styled.h1`
       animation-delay: ${i * 0.15}s;
     }
   `).join('')}
+`;
+
+const ContentContainer = styled.div`
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 20vh 0;
 `;
 
 const SocialLinks = styled.div`
