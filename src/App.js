@@ -59,7 +59,7 @@ const Title = styled.h1`
   }
 
   @media (max-width: 480px) {
-    font-size: 5rem;
+    font-size: 4.5rem;
     letter-spacing: 0.2rem;
   }
 
