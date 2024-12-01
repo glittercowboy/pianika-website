@@ -46,13 +46,24 @@ const ContentContainer = styled.div`
 
 const Title = styled.h1`
   font-family: 'EB Garamond', serif;
-  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-size: min(12vw, 7.5rem);
   letter-spacing: 0.5rem;
   margin: 0;
   padding: 0;
   text-align: center;
   white-space: nowrap;
   animation: float 8s ease-in-out infinite;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    font-size: 11vw;
+    letter-spacing: 0.3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10vw;
+    letter-spacing: 0.2rem;
+  }
 
   span {
     opacity: 0;
