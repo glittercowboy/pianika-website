@@ -46,97 +46,43 @@ const ContentContainer = styled.div`
 
 const Title = styled.h1`
   font-family: 'EB Garamond', serif;
-  font-size: 7.5rem;
-  margin: 0;
+  font-size: clamp(3rem, 10vw, 7.5rem);
   letter-spacing: 0.5rem;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  font-weight: 400;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  animation: float 8s ease-in-out infinite;
 
-  & > span {
-    display: inline-block;
+  span {
     opacity: 0;
-    animation: typewriter 0.5s ease forwards;
+    animation: fadeIn 0.15s ease-in-out forwards;
   }
 
-  ${[...Array(7)].map((_, i) => `
-    & > span:nth-child(${i + 1}) {
+  ${Array.from({ length: 7 }).map((_, i) => `
+    span:nth-child(${i + 1}) {
       animation-delay: ${i * 0.15}s;
     }
   `).join('')}
-
-  @keyframes typewriter {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  animation: float 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  animation-delay: 2.5s;
-
-  @keyframes float {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-2px); }
-    50% { transform: translateY(-3px); }
-    75% { transform: translateY(-2px); }
-    100% { transform: translateY(0); }
-  }
 `;
 
 const SocialLinks = styled.div`
   display: flex;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1.2s ease-out;
-  animation-delay: 1.25s;
-  opacity: 0;
-  animation-fill-mode: forwards;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  gap: 2rem;
+  margin-bottom: 2rem;
+  z-index: 2;
 `;
 
 const IconLink = styled.a`
   color: white;
-  font-size: 1.8rem;
-  transition: all 0.5s ease;
-  position: relative;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.7;
   
   &:hover {
-    opacity: 0.8;
-    transform: scale(1.15) translateY(-5px);
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-    opacity: 0.5;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
+    transform: scale(1.1);
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
 `;
 
