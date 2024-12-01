@@ -156,7 +156,7 @@ function App() {
         </Title>
         <div style={{ flex: 1 }} />
         <SocialLinks>
-          <IconLink href="https://open.spotify.com/artist/PIANIKA" target="_blank" rel="noopener noreferrer">
+          <IconLink href="https://open.spotify.com/artist/6ESkBVPwRTv9Tn9WyrNoQC?si=xTvUsq7fT3GXUi54-ILHlQ" target="_blank" rel="noopener noreferrer">
             <FaSpotify />
           </IconLink>
           <IconLink href="https://music.apple.com/us/artist/pianika/1619462850" target="_blank" rel="noopener noreferrer">
@@ -165,10 +165,10 @@ function App() {
           <IconLink href="https://soundcloud.com/pianika" target="_blank" rel="noopener noreferrer">
             <FaSoundcloud />
           </IconLink>
-          <IconLink href="https://instagram.com/pianikamusic" target="_blank" rel="noopener noreferrer">
+          <IconLink href="https://www.instagram.com/PIANIKAmusic" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </IconLink>
-          <IconLink href="https://youtube.com/@pianika" target="_blank" rel="noopener noreferrer">
+          <IconLink href="https://www.youtube.com/@pianikamusic" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </IconLink>
         </SocialLinks>
