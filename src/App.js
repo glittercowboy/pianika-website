@@ -44,9 +44,11 @@ const AppContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'EB Garamond', serif;
+  font-family: "ltc-nicholas-cochin-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 7.5rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25em;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -54,13 +56,18 @@ const Title = styled.h1`
   animation: ${float} 8s ease-in-out infinite;
   
   @media (max-width: 768px) {
-    font-size: 6rem;
-    letter-spacing: 0.3rem;
+    font-size: 4rem;
+    letter-spacing: 0.25em;
   }
 
   @media (max-width: 480px) {
-    font-size: 4.5rem;
-    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.25em;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 1.8rem;
+    letter-spacing: 0.25em;
   }
 
   span {
