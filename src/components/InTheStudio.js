@@ -5,6 +5,10 @@ const PageContainer = styled.div`
   min-height: 100vh;
   width: 100vw;
   background: #1a1a1a;
+  background-image: url('/assets/images/sky-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
