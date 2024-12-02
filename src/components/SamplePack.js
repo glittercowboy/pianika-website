@@ -23,6 +23,11 @@ const PageContainer = styled.div`
 const CoverImage = styled.img`
   width: 100%;
   max-width: 500px;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 0 5px;
+  }
 `;
 
 const CoverImageLink = styled.a`
