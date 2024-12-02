@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/in-the-studio" element={<InTheStudio />} />
-        <Route path="/sample-pack" element={<SamplePack />} />
+        <Route path="/soundpack" element={<SamplePack />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>

@@ -17,6 +17,7 @@ const PageContainer = styled.div`
   padding: 5vh 0;
   overflow-y: auto;
   position: relative;
+  font-family: 'Cochin', serif;
 `;
 
 const CoverImage = styled.img`
@@ -42,7 +43,6 @@ const DownloadButton = styled.a`
   text-decoration: none;
   font-size: 1rem;
   border-radius: 5px;
-  font-family: 'Cochin', serif;
   transition: background-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
@@ -54,7 +54,7 @@ const DownloadButton = styled.a`
 const ContentWrapper = styled.div`
   width: 80%;
   max-width: 500px;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,27 +65,27 @@ const Header = styled.h1`
   margin-top: 20px;
   font-size: 2rem;
   color: white;
-  text-align: left;
-  font-family: 'Cochin', serif;
+  text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
 const SubHeader = styled.h3`
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   font-size: 1.25rem;
   color: white;
-  text-align: left;
-  font-family: 'Cochin', serif;
+  text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
 const BodyText = styled.p`
-  margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
-  text-align: left;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  margin-bottom: 20px;
   line-height: 1.5;
-  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
 `;
 
 function SamplePack() {
