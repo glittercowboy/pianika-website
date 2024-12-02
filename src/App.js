@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaSpotify, FaSoundcloud, FaInstagram, FaYoutube, FaMusic } from 'react-icons/fa';
-import '@fontsource/eb-garamond';
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -44,7 +43,7 @@ const AppContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: "ltc-nicholas-cochin-pro", sans-serif;
+  font-family: "Cochin", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 7.5rem;
