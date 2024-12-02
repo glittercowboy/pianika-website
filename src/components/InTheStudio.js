@@ -18,6 +18,34 @@ const PageContainer = styled.div`
   position: relative;
 `;
 
+const Header = styled.h1`
+  margin-top: 20px;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  font-family: 'Cochin', serif;
+`;
+
+const SubHeader = styled.h3`
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+  font-family: 'Cochin', serif;
+`;
+
+const BodyText = styled.p`
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  font-family: 'Cochin', serif;
+  line-height: 1.5;
+  max-width: 600px;
+`;
+
 function InTheStudio() {
   useEffect(() => {
     const script = document.createElement('script');
@@ -32,6 +60,13 @@ function InTheStudio() {
 
   return (
     <PageContainer>
+      <Header>In The Studio With: PIANIKA</Header>
+      <SubHeader>4 December 2024 4 - 5:30PM EST</SubHeader>
+      <BodyText>
+        Let’s go behind the scenes of two unreleased tracks, looking at shaker loops, Granulator pads, call and response patterns, and carving out space.
+        <br /><br />
+        I want you to leave this session feeling like you won’t have to sift through samples for the right shaker again, and the confidence to turn a few good ingredients into a delectable dish.
+      </BodyText>
       <div style={{ width: '100%', maxWidth: '600px', height: '430px' }}>
         <iframe
           src="https://link.glittercowboy.com/widget/form/x4tXspKfOaqNOMLEzit5"
