@@ -2,20 +2,22 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const PageContainer = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background: #1a1a1a;
-  background-image: url('/assets/images/sky-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: flex-start;
+  padding: 5vh 0;
+  overflow-y: auto;
   position: relative;
+  font-family: 'Cochin', serif;
+
+  @media (max-width: 768px) {
+    padding: 25px;
+  }
 `;
 
 const Header = styled.h1`
