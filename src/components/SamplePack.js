@@ -26,7 +26,7 @@ const CoverImage = styled.img`
   transition: transform 0.3s ease;
 
   @media (max-width: 768px) {
-    margin: 0 25px;
+    margin: 25px 25px 0 25px;
   }
 `;
 
