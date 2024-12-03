@@ -21,12 +21,12 @@ const PageContainer = styled.div`
 `;
 
 const CoverImage = styled.img`
-  width: 100%;
+  width: calc(100% - 50px);
   max-width: 500px;
   transition: transform 0.3s ease;
 
   @media (max-width: 768px) {
-    padding: 0 5px;
+    margin: 0 25px;
   }
 `;
 
