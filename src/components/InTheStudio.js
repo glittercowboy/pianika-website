@@ -5,6 +5,10 @@ const PageContainer = styled.div`
   height: 100vh;
   width: 100vw;
   background: #1a1a1a;
+  background-image: url('/assets/images/sky-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
@@ -21,11 +25,15 @@ const PageContainer = styled.div`
 `;
 
 const Header = styled.h1`
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 2rem;
   color: white;
   text-align: center;
   font-family: 'Cochin', serif;
+
+  @media (max-width: 768px) {
+    margin-top: 5px;
+  }
 `;
 
 const SubHeader = styled.h3`
