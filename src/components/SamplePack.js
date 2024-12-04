@@ -24,15 +24,18 @@ const CoverImage = styled.img`
   width: calc(100% - 50px);
   max-width: 500px;
   transition: transform 0.3s ease;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
-    margin: 25px 25px 0 25px;
+    margin: 25px auto 0 auto;
   }
 `;
 
 const CoverImageLink = styled.a`
   display: block;
   transition: transform 0.3s ease-in-out;
+  width: 100%;
+  text-align: center;
 
   &:hover {
     transform: scale(1.01);
