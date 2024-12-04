@@ -79,7 +79,7 @@ const FormContainer = styled.div`
   margin: 20px 0;
 `;
 
-function InTheStudio() {
+function MailingList() {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://link.glittercowboy.com/js/form_embed.js';
@@ -93,13 +93,13 @@ function InTheStudio() {
 
   return (
     <PageContainer>
-      <Header>In The Studio With: PIANIKA</Header>
-      <SubHeader>4 December 2024 4 - 5:30PM EST</SubHeader>
+      <Header>Join the PIANIKA Mailing List</Header>
+      <SubHeader>Stay in touch ✨</SubHeader>
       <ContentBlock>
         <BodyText>
-          Let's go behind the scenes of two unreleased tracks, looking at shaker loops, Granulator pads, call and response patterns, and carving out space ✨
+          Be the first to know about new releases, upcoming events, and special projects.
           <br /><br />
-          I want you to leave this session feeling like you won't have to sift through samples for the right shaker again, and the confidence to turn a few good ingredients into a delectable dish.
+          By joining, you'll also get my Tryphena Soundpack for FREE.
         </BodyText>
         <FormContainer>
           <iframe
@@ -113,11 +113,11 @@ function InTheStudio() {
             data-activation-value=""
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
-            data-form-name="In The Studio With: PIANIKA"
+            data-form-name="PIANIKA Mailing List"
             data-height="430"
             data-layout-iframe-id="inline-x4tXspKfOaqNOMLEzit5"
             data-form-id="x4tXspKfOaqNOMLEzit5"
-            title="In The Studio With: PIANIKA"
+            title="PIANIKA Mailing List"
           ></iframe>
         </FormContainer>
       </ContentBlock>
@@ -125,4 +125,4 @@ function InTheStudio() {
   );
 }
 
-export default InTheStudio;
+export default MailingList;
