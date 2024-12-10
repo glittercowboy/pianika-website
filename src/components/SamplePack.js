@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SocialLinks from './SocialLinks';
 
 const PageContainer = styled.div`
   height: 100vh;
@@ -133,6 +134,7 @@ function SamplePack() {
           Happy creating!!<br /><br />
           Pianika xx
         </BodyText>
+        <SocialLinks />
       </ContentWrapper>
     </PageContainer>
   );

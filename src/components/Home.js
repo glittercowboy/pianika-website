@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaSpotify, FaSoundcloud, FaInstagram, FaYoutube, FaMusic } from 'react-icons/fa';
+import SocialLinks from './SocialLinks';
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -94,25 +95,6 @@ const ContentContainer = styled.div`
   padding: 20vh 0;
 `;
 
-const SocialLinks = styled.div`
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  z-index: 2;
-`;
-
-const SocialLink = styled.a`
-  color: white;
-  font-size: 1.5rem;
-  opacity: 0.7;
-  transition: all 0.2s ease-in-out;
-  
-  &:hover {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-`;
-
 function Home() {
   return (
     <AppContainer>
@@ -124,20 +106,7 @@ function Home() {
           ))}
         </Title>
         <div style={{ flex: 1 }} />
-        <SocialLinks>
-          <SocialLink href="https://open.spotify.com/artist/5dfZ5uSmzR7VQK0udbAVpf" target="_blank" rel="noopener noreferrer">
-            <FaSpotify />
-          </SocialLink>
-          <SocialLink href="https://soundcloud.com/pianikamusic" target="_blank" rel="noopener noreferrer">
-            <FaSoundcloud />
-          </SocialLink>
-          <SocialLink href="https://www.instagram.com/pianika.wav" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </SocialLink>
-          <SocialLink href="https://www.youtube.com/@pianikamusic" target="_blank" rel="noopener noreferrer">
-            <FaYoutube />
-          </SocialLink>
-        </SocialLinks>
+        <SocialLinks />
       </ContentContainer>
     </AppContainer>
   );

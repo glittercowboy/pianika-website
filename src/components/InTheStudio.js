@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import SocialLinks from './SocialLinks';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -120,6 +121,7 @@ function InTheStudio() {
             title="In The Studio With: PIANIKA"
           ></iframe>
         </FormContainer>
+        <SocialLinks />
       </ContentBlock>
     </PageContainer>
   );
